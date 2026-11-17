@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern, elegant Simple Calculator – CodeOrbit Tech Web Development Internship Task 3" />
+  <title>Simple Calculator | CodeOrbit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       Main Calculator Card
+  ============================================== -->
+  <main class="calculator-wrapper" role="main" aria-label="Calculator Application">
+
+    <!-- Branding / Header -->
+    <header class="calc-header">
+      <span class="brand-dot"></span>
+      <h1 class="brand-title">Calculator</h1>
+      <span class="brand-dot"></span>
+    </header>
+
+    <!-- Calculator Card -->
+    <div class="calculator" role="region" aria-label="Calculator">
+
+      <!-- ── Display Screen ── -->
+      <section class="display" aria-live="polite" aria-label="Calculator display">
+        <!-- Expression line (shows the ongoing expression) -->
+        <div class="display__expression" id="expression" aria-label="Expression">0</div>
+        <!-- Result line (shows calculated result or current input) -->
+        <div class="display__result"     id="result"     aria-label="Result"></div>
+      </section>
+
+      <!-- ── Button Grid ── -->
+      <div class="buttons" role="group" aria-label="Calculator buttons">
+
+        <!-- Row 1: Utility operators -->
+        <button class="btn btn--utility"   data-action="clear"    id="btn-clear"   aria-label="Clear all">AC</button>
+        <button class="btn btn--utility"   data-action="delete"   id="btn-delete"  aria-label="Delete last character">DEL</button>
+        <button class="btn btn--operator"  data-action="percent"  id="btn-percent" aria-label="Percentage">%</button>
+        <button class="btn btn--operator"  data-action="operator" data-value="÷"   aria-label="Divide">÷</button>
+
+        <!-- Row 2: 7 8 9 × -->
+        <button class="btn btn--number"    data-action="number"   data-value="7"   aria-label="7">7</button>
+        <button class="btn btn--number"    data-action="number"   data-value="8"   aria-label="8">8</button>
+        <button class="btn btn--number"    data-action="number"   data-value="9"   aria-label="9">9</button>
+        <button class="btn btn--operator"  data-action="operator" data-value="×"   aria-label="Multiply">×</button>
+
+        <!-- Row 3: 4 5 6 − -->
+        <button class="btn btn--number"    data-action="number"   data-value="4"   aria-label="4">4</button>
+        <button class="btn btn--number"    data-action="number"   data-value="5"   aria-label="5">5</button>
+        <button class="btn btn--number"    data-action="number"   data-value="6"   aria-label="6">6</button>
+        <button class="btn btn--operator"  data-action="operator" data-value="−"   aria-label="Subtract">−</button>
+
+        <!-- Row 4: 1 2 3 + -->
+        <button class="btn btn--number"    data-action="number"   data-value="1"   aria-label="1">1</button>
+        <button class="btn btn--number"    data-action="number"   data-value="2"   aria-label="2">2</button>
+        <button class="btn btn--number"    data-action="number"   data-value="3"   aria-label="3">3</button>
+        <button class="btn btn--operator"  data-action="operator" data-value="+"   aria-label="Add">+</button>
+
+        <!-- Row 5: 00 0 . = -->
+        <button class="btn btn--number"    data-action="number"   data-value="00"  aria-label="Double zero">00</button>
+        <button class="btn btn--number"    data-action="number"   data-value="0"   aria-label="0">0</button>
+        <button class="btn btn--number"    data-action="decimal"  id="btn-decimal" aria-label="Decimal point">.</button>
+        <button class="btn btn--equals"    data-action="calculate"               aria-label="Calculate result">=</button>
+
+      </div><!-- /.buttons -->
+    </div><!-- /.calculator -->
+
+    <!-- Footer credit -->
+    <footer class="calc-footer">
+      <p>CodeOrbit Tech · Web Development Internship · Task 3</p>
+    </footer>
+
+  </main><!-- /.calculator-wrapper -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
